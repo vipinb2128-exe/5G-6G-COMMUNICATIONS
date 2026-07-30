@@ -1,0 +1,14 @@
+clc;
+clear;
+close all;
+slices = [1 2 3 4 5];
+latency = [25 5 40 15 60];
+figure;
+plot(slices, latency, '-o','LineWidth',2,'MarkerSize',8);
+grid on;
+xticks(slices);
+xticklabels({'eMBB','URLLC','mMTC','Private','IoT'});
+xlabel('Network Slice Type');
+ylabel('End-to-End Latency (ms)');
+title('5G Network Slicing: End-to-End Latency');
+ylim([0 70]);

@@ -1,0 +1,12 @@
+clc;
+clear;
+close all;
+snr = 0:5:30;
+snr_linear = 10.^(snr/10);
+capacity = log2(1 + snr_linear);
+figure;
+plot(snr,capacity,'-o','LineWidth',2,'MarkerSize',6);
+grid on;
+xlabel('SNR (dB)');
+ylabel('Channel Capacity (bps/Hz)');
+title('Channel Capacity vs SNR');
